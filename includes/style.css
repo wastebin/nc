@@ -1,0 +1,143 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  overflow-y: scroll;
+  background: var(--img) repeat fixed;
+  visibility: visible;
+}
+
+body {
+  margin: 1.5rem;
+  display: grid;
+  grid-template-columns: 1fr 40rem 1fr;
+  grid-gap: 1.5rem;
+
+  color: var(--text);
+  font-family: "Linux Biolinum", sans-serif;
+  font-size: 1.2rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Linux Libertine", serif;
+}
+
+h1 {
+  font-size: inherit;
+}
+
+h2 {
+  font-size: 1.7rem;
+}
+
+h3, h4, h5, h6 {
+  font-size: 1.4rem;
+}
+
+li {
+  list-style-position: inside;
+}
+
+a {
+  color: var(--link);
+}
+a:visited {
+  color: var(--seen);
+}
+
+code, kbd {
+  font-family: monospace;
+}
+
+button, .button {
+  border: 1px solid var(--line);
+  padding: 1rem;
+
+  background: var(--bg-item);
+}
+button:focus, .button:focus {
+  border: 1px dotted var(--line);
+  outline: none;
+}
+button:active, .button:active {
+  background: var(--bg-active);
+}
+::-moz-focus-inner {
+  border: 0;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid var(--line);
+}
+
+.owl > * + *, .owl > ol > * + *, .owl > ul > * + * {
+  margin-top: 1rem;
+}
+
+.block {
+  display: block;
+}
+
+.left-pane {
+  position: relative;
+  text-align: right;
+}
+.controls {
+  visibility: hidden;
+
+  display: inline-block;
+  padding: 1rem;
+
+  background: var(--bg);
+  border: 1px solid var(--line);
+}
+.controls.ready {
+  visibility: visible;
+}
+
+.controls > a {
+  line-height: 0;
+}
+.controls > * + * {
+  margin-top: 1rem;
+}
+
+.mode-toggle-img {
+  background: var(--mode-toggle-img);
+}
+
+.main {
+  padding: 1rem;
+
+  background: var(--bg);
+  border: 1px solid var(--line);
+}
+
+.dummy-31 {
+  width: 31px;
+  height: 31px;
+}
+
+.b88x31 {
+  line-height: 31px;
+}
+.b88x31 > a {
+  display: inline-block;
+}
+.b88x31 > a > img {
+  display: block;
+}
+.b88x31 > * {
+  margin-left: 8px;
+}
+.b88x31.attrib > * {
+  margin-left: 6px;
+  border-left: 2px solid var(--line);
+}
+.b88x31.attrib > .homemade {
+  border-left: 2px solid var(--alert);
+}

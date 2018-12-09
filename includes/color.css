@@ -1,0 +1,92 @@
+:root {
+  --lite-text: #000;
+  --lite-gtxt: #789922; /* yotsuba */
+/*--lite-ptxt: */
+  --lite-link: #04D;
+  --lite-seen: #008;
+  --lite-line: #AAA;
+  --lite-bg: #E8E8E8;
+  --lite-bg-item: #F0F0F0;
+  --lite-bg-active: #F8F8F8;
+  --lite-alert: #F00;
+  --lite-img: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAJCAYAAADgkQYQAAAAOElEQVQYlYXKuREAIAwEMfdfinvaWo4IxoCfQJkMUMfdZVMA6rRDmWJI0xu+lIUrVeGkLgCyKQBaY3kdJQ/B9eMAAAAASUVORK5CYII=);
+  --lite-mode-toggle-img: url(/nightmode.png);
+
+  --dark-text: #FFF;
+  --dark-gtxt: #B5BD68; /* tomorrow */
+/*--dark-ptxt: */
+  --dark-link: #26F;
+  --dark-seen: #77F;
+  --dark-line: #555;
+  --dark-bg: #111;
+  --dark-bg-item: #222;
+  --dark-bg-active: #333;
+  --dark-alert: #F32;
+  --dark-img: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAJCAYAAADgkQYQAAAAOElEQVQYlYXKuREAIAwEMbewxbn/Uo4IxoCfQJkMUMfdZVMA6rRDmWJI0xu+lIUrVeGkLgCyKQBaOo5n/+MglCYAAAAASUVORK5CYII=);
+  --dark-mode-toggle-img: url(/daymode.png);
+}
+
+:root {
+  --text: var(--lite-text);
+  --gtxt: var(--lite-gtxt);
+  --link: var(--lite-link);
+  --seen: var(--lite-seen);
+  --line: var(--lite-line);
+  --bg: var(--lite-bg);
+  --bg-item: var(--lite-bg-item);
+  --bg-active: var(--lite-bg-active);
+  --alert: var(--lite-alert);
+  --img: var(--lite-img);
+  --mode-toggle-img: var(--lite-mode-toggle-img);
+}
+:root.night-mode {
+  --text: var(--dark-text);
+  --gtxt: var(--dark-gtxt);
+  --link: var(--dark-link);
+  --seen: var(--dark-seen);
+  --line: var(--dark-line);
+  --bg: var(--dark-bg);
+  --bg-item: var(--dark-bg-item);
+  --bg-active: var(--dark-bg-active);
+  --alert: var(--dark-alert);
+  --img: var(--dark-img);
+  --mode-toggle-img: var(--dark-mode-toggle-img);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text: var(--dark-text);
+    --gtxt: var(--lite-gtxt);
+    --link: var(--lite-link);
+    --seen: var(--lite-seen);
+    --line: var(--dark-line);
+    --bg: var(--dark-bg);
+    --bg-item: var(--dark-bg-item);
+    --bg-active: var(--dark-bg-active);
+    --alert: var(--dark-alert);
+    --img: var(--dark-img);
+    --mode-toggle-img: var(--dark-mode-toggle-img);
+  }
+  :root.day-mode {
+    --text: var(--lite-text);
+    --gtxt: var(--dark-gtxt);
+    --link: var(--dark-link);
+    --seen: var(--dark-seen);
+    --line: var(--lite-line);
+    --bg: var(--lite-bg);
+    --bg-item: var(--lite-bg-item);
+    --bg-active: var(--lite-bg-active);
+    --alert: var(--lite-alert);
+    --img: var(--lite-img);
+    --mode-toggle-img: var(--lite-mode-toggle-img);
+  }
+}
+
+.dark-media, .night-mode .light-media {
+  filter: invert(1) hue-rotate(180deg);
+}
+@media (prefers-color-scheme: dark) {
+  .light-media, .day-mode .dark-media {
+    filter: invert(1) hue-rotate(180deg);;
+  }
+}

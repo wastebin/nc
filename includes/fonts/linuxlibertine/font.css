@@ -1,0 +1,20 @@
+@font-face {
+  font-family: "Linux Libertine";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Linux Libertine O"), url(400.woff) format("woff");
+}
+
+@font-face {
+  font-family: "Linux Libertine";
+  font-style: normal;
+  font-weight: 700;
+  src: local("Linux Libertine O Bold"), url(700.woff) format("woff");
+}
+
+@font-face {
+  font-family: "Linux Libertine";
+  font-style: italic;
+  font-weight: 400;
+  src: local("Linux Libertine O Italic"), url(400i.woff) format("woff");
+}
