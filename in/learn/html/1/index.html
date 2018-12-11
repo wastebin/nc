@@ -1,0 +1,59 @@
+<!-- attrib title: HTML tutorial, chapter 1: getting started -->
+<!-- attrib description: It begins. -->
+<!-- attrib template: default -->
+<h2 id=s1.1><a href=#s1.1>(1.1)</a> What is HTML?</h2>
+<p>HTML, short for <em>Hypertext Markup Language</em>, is a written language used to describe webpages. Hypertext is text containing hyperlinks, and marking up a document is annotating it such that the annotations are syntactically distinguishable <!-- hey mari, you should be taking notes --> from its 
+content. HTML documents mainly consist of plain text, and tags.</p>
+
+<h2 id=s1.2><a href=#s1.2>(1.2)</a> Tags</h2>
+<p>Tags are pieces of text that the document is marked up with. Two common kinds of HTML tags are <em>start tags</em> and <em>end tags</em>. The simplest kind of start tag takes the following form: <code>&lt;<b>tag-name</b>></code>, and end tags take the form <code>&lt;/<b>tag-name</b>></code>. An example 
+of a tag name is <code>h1</code>, which is short for “header one”; here’s an example of an opening and closing tag, both with the tag name <code>h1</code>, surrounding the plain text “My website”: <code>&lt;h1>My website&lt;/h1></code>.</p>
+<p>Start and end tags almost always must come in pairs, and each pair’s start and end tags must have the same tag name. Sequences of a start tag, valid HTML content, and a matching end tag are referred to as elements. <!-- Hey mari, you still paying attention? --> Elements may fully contain other elements, 
+but their starts and ends may not overlap (e.g. <code>&lt;article>&lt;h1>Hello, world.&lt;/article>&lt;/h1></code> is invalid; the problem here is that the <code>h1</code> element starts inside of another element, but ends outside of it.)</p>
+<p>Void tags, another kind of tag, are like start tags, except they contain nothing and have no corresponding end tag. Here’s an example of a void tag with the tag name <code>br</code> (short for line break): <code>&lt;br></code>.</p>
+<p class=note>Note: a tag name is only valid if it’s described in the HTML specification, or has been defined with JS.</p>
+
+<h2 id=s1.3><a href=#s1.3>(1.3)</a> Attributes</h2>
+<p>Start and void tags may have <em>attributes</em>, which take the form <code><b>name</b>=<b>value</b></code> and come right after the tag name. Here’s an example of a void tag with a <code>src</code> attribute: <code>&lt;img src=/neocities.png></code>. If an attribute’s value contains spaces, put double 
+quotation marks around the value (e.g. <code>title="hewwo there!"</code>.) If an attribute’s value contains double quotation marks, put a backslash (<code>\</code>) before every double quotation mark, then put double quotation marks around the value (e.g. <code>title="Dwain \"The Rock\" 
+Johnson"</code>).</p>
+
+<h2 id=s1.4><a href=#s1.4>(1.4)</a> Anatomy of an HTML file</h2>
+<p>Here are the contents of a simple and valid HTML file:</p>
+<pre>&lt;!DOCTYPE html>
+&lt;html lang=en>
+
+&lt;meta charset=UTF-8>
+&lt;title>My Website&lt;/title></pre>
+<ul>
+  <li><code>&lt;!DOCTYPE html></code> is the HTML5 document type declaration. In HTML, a document type declaration declares what version of the HTML specification the document follows. The document type declaration needs to occur before any tags.</li>
+  <li>The <code>html</code> start tag, despite having no end tag, is actually still a start tag. Start and end tags almost always must come in pairs, but one exception is <code>html</code> tags. the HTML specification allows <code>html</code> elements to be missing a start tag, an end tag, or both; they are 
+inferred in a predictable manner. We are writing the start tag explicitly so we can set the <code>html</code> element’s <code>lang</code> attribute, which declares the page’s language. If your page is not going to be in English, replace <code>en</code> with your language’s <a 
+href=https://en.wikipedia.org/wiki/ISO_639-1>ISO 639-1 two letter country code</a>.</li>
+  <li><code>meta</code> elements, made of void tags, represent information about the HTML document, or the webpage the HTML file represents, that isn’t part of the webpage. The <code>charset</code> attribute declares the character encoding of the HTML file.</li>
+  <li><code>&lt;title>My Website&lt;/title></code> declares the document’s title to be “My Website”. In a web browser, documents’ titles are often displayed as the browser’s tab or window title.</li>
+</ul>
+
+<h2 id=s1.5><a href=#s1.5>(1.5)</a> Actually making a file</h2>
+<p>Follow these steps:</p>
+<ol>
+  <li>Go to <a href=https://neocities.org>Neocities</a>.</li>
+  <li>Log in or sign up.</li>
+  <li>Click <b>Edit Site</b> (it’s near the upper right hand corner.)</li> <!-- TODO: write and link to a side-article on the official Neocities CLI and alternatives -->
+  <li>Click <b>New Folder</b>.</li>
+  <li>Name the folder “tutorial”.</li>
+  <li>Hover over the new folder.</li>
+  <li>Click on <b>Manage</b>.</li>
+  <li>Click <b>New File</b>.</li>
+  <li>Name the file “index.html”.</li> <!-- TODO: explain why it’s called “index.html” -->
+  <li>Hover over the new file.</li>
+  <li>Click <b>Edit</b>.</li>
+  <li>Delete all the stuff.</li>
+  <li>Copy the HTML in the <a href=#s1.4><em>Anatomy of an HTML file</em></a> section and paste it into the editor.</li>
+  <li>Click <b>Save</b>.</li>
+</ol>
+<p>If you go to <kbd>http://<b>{YOUR SITE NAME HERE}</b>.neocities.org/tutorial/</kbd>, you should be greeted with an empty webpage.</p>
+
+<h2 id=s1.6><a href=#s1.6>(1.6)</a> Adding stuff</h2>
+<p>This page is empty. Let’s change that. In the editor, add the following text on a new line after the title element: <code>&lt;img src=/neocities.png></code>. Click <b>Save</b> again. Reload your tutorial page. There should now be an image on the page.</p>
+<p>To be continued…</p>
